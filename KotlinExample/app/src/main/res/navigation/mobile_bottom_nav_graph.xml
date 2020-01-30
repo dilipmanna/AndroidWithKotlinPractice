@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_bottom_nav_graph"
+    app:startDestination="@id/bottom_nav_favorite">
+
+    <fragment
+        android:id="@+id/bottom_nav_home"
+        android:name="com.example.kotlinexample.fragment.BottomHomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_bottom_home" />
+    <fragment
+        android:id="@+id/bottom_nav_favorite"
+        android:name="com.example.kotlinexample.fragment.BottomFavoriteFragment"
+        android:label="Favorite"
+        tools:layout="@layout/fragment_bottom_favorite" />
+    <fragment
+        android:id="@+id/bottom_nav_setting"
+        android:name="com.example.kotlinexample.fragment.BottomSettingFragment"
+        android:label="Setting"
+        tools:layout="@layout/fragment_bottom_setting" />
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.kotlinexample.activities.ui.gallery.GalleryFragment"
+        android:label="GalleryFragment" />
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.kotlinexample.activities.ui.slideshow.SlideshowFragment"
+        android:label="SlideshowFragment" />
+</navigation>

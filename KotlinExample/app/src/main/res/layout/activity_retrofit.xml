@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_5sdp"
+    tools:context=".activities.RetrofitActivity">
+
+    <Button
+        android:id="@+id/btn_apiCall"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Insert DB from API"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_20sdp"/>
+    <Button
+        android:id="@+id/btn_dbCall"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load List from db"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_20sdp"/>
+    <Button
+        android:id="@+id/btn_deleteAll"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete all employee from db"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_20sdp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_employeeList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_5sdp"/>
+
+
+</LinearLayout>
