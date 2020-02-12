@@ -14,6 +14,7 @@ class ProjectConstant {
             AndroidUI("NavigationDrawer"),
             AndroidUI("BottomNavigation"),
             AndroidUI("MaterialTabs"),
+            AndroidUI("Custom Filtered Adapter"),
             AndroidUI("Sqlite"),
             AndroidUI("RoomDB"),
             AndroidUI("Retrofit"),

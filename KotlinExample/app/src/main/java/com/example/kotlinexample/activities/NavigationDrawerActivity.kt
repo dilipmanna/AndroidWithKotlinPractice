@@ -61,6 +61,7 @@ class NavigationDrawerActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
+
         //hear for event changes
         navController.addOnDestinationChangedListener { _, destination, _ ->
             val dest: String = try {
@@ -73,11 +74,11 @@ class NavigationDrawerActivity : AppCompatActivity() {
                 Toast.LENGTH_SHORT
             ).show()
             Log.d("NavigationActivity", "Navigated to $dest")
+
         }
 
     }
-
-
+    
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.navigation_drawer, menu)

@@ -75,6 +75,7 @@ class MainActivity : BaseActivity() {
             "NavigationDrawer" ->{goToNext(NavigationDrawerActivity::class.java)}
             "BottomNavigation" ->{goToNext(BottomNavigationActivity::class.java)}
             "MaterialTabs" -> {goToNext(MaterialTabsActivity::class.java)}
+            "Custom Filtered Adapter" ->{goToNext(CountryFilterActivity::class.java)}
         }
     }
 }

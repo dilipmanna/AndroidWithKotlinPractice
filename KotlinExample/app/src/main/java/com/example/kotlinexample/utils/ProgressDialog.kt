@@ -18,7 +18,7 @@ class ProgressDialog(val context: Context) {
         dialog .setCancelable(false)
         dialog.setCanceledOnTouchOutside(false)
         dialog.getWindow()?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        val tv_message = dialog .findViewById(R.id.tv_message) as TextView
+        val tv_message = dialog.findViewById(R.id.tv_message) as TextView
         tv_message.text = message
     }
     fun showProgressDialog()
