@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.kotlinexample.R
 import com.example.kotlinexample.activities.firebase.LoginActivity
+import com.example.kotlinexample.adapters.OnItemClickInterface
 import com.example.kotlinexample.adapters.UIListAdapter
 import com.example.kotlinexample.model.AndroidUI
 import com.example.kotlinexample.utils.ProjectConstant
@@ -23,13 +24,19 @@ class MainActivity : BaseActivity() {
         Log.i(TAG,"OnCreate")
         val layoutManager = StaggeredGridLayoutManager(1,1)
         rvUIItem.layoutManager = layoutManager
-        var uiListAdapter = UIListAdapter(ProjectConstant.uilist)
+        var uiListAdapter = UIListAdapter(ProjectConstant.uilist, object:OnItemClickInterface{
+            override fun OnItemClicked(androidUI: AndroidUI) {
+                uiItemClicked(androidUI)
+            }
+        })
+
         rvUIItem.adapter = uiListAdapter
 
+        /*
         uiListAdapter.OnItemClick = {
             Log.i(TAG,"${it.name} was clicked")
             uiItemClicked(it)
-        }
+        }*/
 
     }
 

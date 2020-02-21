@@ -12,10 +12,9 @@ import com.example.kotlinexample.model.AndroidUI
 import kotlinx.android.synthetic.main.ui_item.view.*
 
 
-class UIListAdapter(var uiList:List<AndroidUI>): RecyclerView.Adapter<UIListAdapter.MyViewHolder>()
+class UIListAdapter(var uiList:List<AndroidUI>, var myInterface:OnItemClickInterface): RecyclerView.Adapter<UIListAdapter.MyViewHolder>()
 {
-   //var onItemClick:((AndroidUI) -> Unit)? = null
-    var OnItemClick:((AndroidUI) -> Unit)? = null
+   // var OnItemClick:((AndroidUI) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view =  LayoutInflater.from(parent.context).inflate(R.layout.ui_item,parent,false)
@@ -32,10 +31,16 @@ class UIListAdapter(var uiList:List<AndroidUI>): RecyclerView.Adapter<UIListAdap
     {
         var btnItem: Button = itemView.btnItem
         init {
+            /*
             btnItem.setOnClickListener{
                 OnItemClick?.invoke(uiList[adapterPosition])
+            }*/
+            btnItem.setOnClickListener {
+                myInterface.OnItemClicked(uiList[adapterPosition])
             }
-            //btnItem.Click
         }
     }
+}
+interface OnItemClickInterface{
+    public fun OnItemClicked(androidUI: AndroidUI)
 }
